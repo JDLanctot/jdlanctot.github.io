@@ -1,3 +1,11 @@
+:root {
+  --background-color: #FFFAFF;
+  --header-color: #1A659E;
+  --accent-color-1: #E84855;
+  --accent-color-2: #E4572E;
+  --accent-color-3: #6DB1BF;
+}
+
 /* Reset default styles */
 * {
   box-sizing: border-box;
@@ -10,7 +18,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #F7F7F7;
+  background-color: var(--background-color);
 }
 
 /* Set styles for header */
@@ -19,14 +27,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #FFFFFF;
+  background-color: var(--header-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   font-size: 28px;
   font-weight: bold;
-  color: #333333;
+  color: var(--background-color);
 }
 
 header nav ul {
@@ -40,12 +48,12 @@ header nav li {
 
 header nav a {
   text-decoration: none;
-  color: #333333;
+  color: var(--background-color);
   transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: #0077CC;
+  color: var(--accent-color-3);
 }
 
 /* Set styles for main content */
@@ -53,14 +61,14 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #FFFFFF;
+  background-color: var(--background-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 main h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333333;
+  color: var(--accent-color-3);
 }
 
 main p {
@@ -93,11 +101,11 @@ main a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: #333333;
+  color: var(--accent-color-3);
 }
 
 main a:hover {
-  color: #0077CC;
+  color: var(--accent-color-1);
 }
 
 main h3 {
@@ -111,19 +119,19 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #FFFFFF;
+  background-color: var(--header-color);
   box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-size: 14px;
-  color: #666666;
+  color: var(--background-color);
 }
 
 footer a {
   text-decoration: none;
-  color: #666666;
+  color: var(--header-color);
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #0077CC;
+  color: var(--accent-color-3);
 }
