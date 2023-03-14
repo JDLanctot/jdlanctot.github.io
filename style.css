@@ -101,13 +101,12 @@ main {
 
 main h2 {
   font-size: 2.5em;
-  margin-bottom: 10px;
   margin-top: 10px;
   color: var(--white);
 }
 
 main h3 {
-  font-size: 20px;
+  font-size: 1.6em;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -142,7 +141,7 @@ main a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: var(--accent-color-3);
+  color: var(--white);
 }
 
 main a:hover {
@@ -181,41 +180,14 @@ footer a:hover {
   flex-grow: 1;
 }
 
-.left-col, .right-col {
-  margin-bottom: 40px;
+.separator {
+  border-bottom: 5px solid var(--background-color);
+  margin: 40px 0;
 }
 
 /*.left-col .text-content, .right-col .text-content {*/
 /*  max-width: 750px;*/
 /*}*/
-
-/* Media query for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .multi-col {
-    display: flex;
-    flex-grow: 1;
-  }
-
-  .card {
-    flex-basis: calc(50% - 10px);
-  }
-
-  .card:first-child {
-    margin-right: 20px;
-  }
-
-  .card:last-child {
-    margin-left: 20px;
-  }
-
-  .profile-pic{
-    width: 20em !important;
-    height: 20em !important;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    margin: 30px !important;
-  }
-}
 
 .card, .card-show {
   border-radius: 10px;
@@ -243,7 +215,6 @@ footer a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .text-content {
@@ -254,10 +225,20 @@ footer a:hover {
 .card p {
   margin: 0.8rem;
   font-family: "Rubik", sans-serif;
-  font-size: 1.5em;
   line-height: 2;
 }
 
+.card ul {
+  list-style: circle;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card li {
+  width: 95%;
+  margin-left: 40px;
+}
 
 /* Set styles for the about me section */
 .profile-pic {
@@ -288,6 +269,7 @@ footer a:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--off-white);
   padding: 20px;
+  max-width: 43vmin;
 }
 
 .track-image {
@@ -300,6 +282,20 @@ footer a:hover {
 /* -- Button Styles -- */
 body.menu-toggled > .my-button > span {
   color: rgb(30, 30, 30);
+}
+
+.toggle-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.toggle-button.active {
+  background-color: #f2f2f2;
+}
+
+.toggle-content.active {
+  max-height: 1000px;
 }
 
 .centre-btn {
@@ -363,4 +359,157 @@ body.menu-toggled > .my-button > span {
 
 .scholar {
   background-color: var(--accent-color-1);
+}
+
+/*.resume p {*/
+/*  font-size: 14pt;*/
+/*}*/
+
+/*.resume ul {*/
+/*  list-style: circle;*/
+/*  display: block;*/
+/*}*/
+
+/*.resume li {*/
+/*  font-size: 14pt;*/
+/*}*/
+
+/* Media query for screens larger than 1200px */
+@media only screen and (min-width: 1200px) {
+  .multi-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .left-col, .right-col {
+    margin-bottom: 40px;
+    width: calc(50% - 10px);
+  }
+
+  .left-image {
+    display: flex;
+  }
+
+  .card {
+    flex-basis: calc(50% - 10px);
+    height: 100%;
+  }
+
+  .card:first-child {
+    margin-right: 20px;
+  }
+
+  .card:last-child {
+    margin-left: 20px;
+  }
+
+  .card p {
+    font-size: 1.5em;
+  }
+
+  .card li {
+    font-size: 1.5em;
+  }
+
+  .profile-pic{
+    width: 20em !important;
+    height: 20em !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 30px !important;
+  }
+}
+
+/* Media query for screens between 768px and 1200px */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .multi-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .left-col, .right-col {
+    margin-bottom: 40px;
+    width: calc(50% - 10px);
+  }
+
+  .left-image {
+    display: flex;
+  }
+
+  .card {
+    flex-basis: calc(50% - 10px);
+    height: 100%;
+  }
+
+  .card:first-child {
+    margin-right: 20px;
+  }
+
+  .card:last-child {
+    margin-left: 20px;
+  }
+
+  .card p {
+    font-size: 1.2em;
+  }
+
+  .card li {
+    font-size: 1.2em;
+  }
+
+  .profile-pic{
+    width: 15em !important;
+    height: 15em !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 30px !important;
+  }
+}
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+  .multi-col {
+    display: block;
+  }
+
+  .left-col, .right-col {
+    margin-bottom: 40px;
+  }
+
+  .left-image {
+    display: inline;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card:first-child {
+    margin-right: 0;
+  }
+
+  .card:last-child {
+    margin-left: 0;
+  }
+
+  .card p {
+    font-size: 1em;
+  }
+
+  .card li {
+    font-size: 1em;
+  }
+
+  .profile-pic{
+    width: 10em !important;
+    height: 10em !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 30px auto !important;
+    display: block;
+  }
 }

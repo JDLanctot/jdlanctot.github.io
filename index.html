@@ -14,18 +14,20 @@
       <nav class="navbar">
         <h1 class="navbar-brand">Jordan D. Lanctot</h1>
         <ul class="navbar-nav">
-<!--          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>-->
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
 <!--          <li class="nav-item"><a href="#" class="nav-link">About</a></li>-->
           <li class="nav-item"><a id="header-portfolio-btn" class="nav-link">Portfolio</a></li>
-<!--          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>-->
+          <li class="nav-item"><a href="#connect" class="nav-link">Connect</a></li>
+          <li class="nav-item"><a href="#employment" class="nav-link">Employment</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section>
-        <div class="card" data-index="1">
+        <div id="about" class="card" data-index="1">
           <h2>About Me</h2>
-          <div class="card-content">
+          <div class="card-content left-image">
             <img class="profile-pic" src="assets/images/profile.jpg" alt="Jordan D. Lanctot">
             <div class="text-content">
               <p>As a curious and multidisciplinary problem-solver, I'm driven to push the boundaries of what's possible with physics. With extensive software development experience, a background in audio engineering, and working on a Master's degree in Complex Systems, I bring a unique perspective to technical challenges. </p>
@@ -41,7 +43,7 @@
             <div class="card-content">
               <div class="text-content">
                 <p>Explore some of my previous work by interacting with the following projects after clicking the Portfolio Button.</p>
-                <p>This will reveal my portfolio, to which you can click and drag to scroll through the projects and click on them to explore more.</p>
+                <p>This will reveal some of my strongest portfolio pieces across a number of domains; The portfolio can be interacted by clicking and draging on the elements to scroll through the projects and learn more.</p>
                 <div class="centre-btn">
                   <a id="portfolio-btn" class="my-button">
           <!--          <i class="fa-solid fa-link"></i>-->
@@ -53,21 +55,21 @@
           </div>
         </div>
         <div class="right-col">
-          <div class="card" data-index="3">
+          <div id="connect" class="card" data-index="3">
             <h2>Connect</h2>
             <div class="card-content">
               <div class="text-content">
                 <p>Feel free to reach out and connect with me.</p>
                 <div class="socials">
-                  <a class="my-button linkedin" href="https://www.linkedin.com/in/jordan-lanctot-142b67238/">
+                  <a class="my-button linkedin" href="https://www.linkedin.com/in/jordan-lanctot-142b67238/" target="_blank">
                     <!--          <i class="fa-solid fa-link"></i>-->
                     <span>LinkedIn</span>
                   </a>
-                  <a class="my-button twitter" href="https://twitter.com/JDLanctot">
+                  <a class="my-button twitter" href="https://twitter.com/JDLanctot" target="_blank">
                     <!--          <i class="fa-solid fa-link"></i>-->
                     <span>Twitter</span>
                   </a>
-                  <a class="my-button scholar" href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Jordan+Lanctot&btnG=">
+                  <a class="my-button scholar" href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Jordan+Lanctot&btnG=" target="_blank">
                     <!--          <i class="fa-solid fa-link"></i>-->
                     <span>Articles</span>
                   </a>
@@ -77,29 +79,234 @@
           </div>
         </div>
       </section>
+      <section class="multi-col">
+        <div class="left-col">
+          <div id="education" class="card" data-index="4">
+            <h2>Education</h2>
+            <div class="card-content">
+              <div class="text-content">
+                <h3>Graduate Research Assistant in Physics - Toronto Metropolitan University</h3>
+                <h3>MAY 2022 - PRESENT</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Conducted extensive research in the field of artificial intelligence and competitive reinforcement learning, developing novel algorithms and models that improved upon existing methods.</li>
+                      <li>Graded papers, labs, and exams for undergraduate students, providing valuable feedback that helped students understand complex concepts and improve their grades.</li>
+                      <li>Led laboratory exercises for undergraduate students, teaching hands-on skills in data analysis, simulation, and visualization using Python.</li>
+                      <li>Showcased technical proficiency in Python programming and command line, utilizing these tools to analyze and interpret complex data, run simulations, and visualize results.</li>
+                      <li>Contributed to multiple peer-reviewed publications in leading journals and conferences, presenting the results of the research and its impact on the field.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>Software Development Consultant - Dockets.ca</h3>
+                <h3>NOVEMBER 2020 - PRESENT</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Improved the user experience and overall functionality of the Dockets.ca SaaS through strategic product consultation.</li>
+                      <li>Established a strong brand image for the software by developing and executing a comprehensive branding strategy, including style guides, logos, and application icons.</li>
+                      <li>Streamlined the onboarding process for provincial bodies by creating informative and easy-to-follow video tutorials and demo videos.</li>
+                      <li>Demonstrated expertise in the Adobe Creative Suite, to create visually appealing and professional materials that effectively showcased the software's features and capabilities.</li>
+                      <li>Worked closely with cross-functional teams to ensure that branding and marketing efforts aligned with the company's goals and vision.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>NSERC Grantee and Research Assistant - Toronto Metropolitan University</h3>
+                <h3>MAY 2021 - SEPTEMBER 2021</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Applied advanced statistical and machine learning techniques to conduct research in three domains within the prediction markets: universality, efficiency and tribalism, and time series clustering.</li>
+                      <li>Possessed a strong understanding of data analysis, feature engineering, model selection and evaluation, and hypothesis testing.</li>
+                      <li>Worked closely with research team to develop and implement descriptive models, resulting in improved understanding of Prediction Markets at large.</li>
+                      <li>Analyzed and interpreted large and complex datasets, presenting findings in a clear and impactful manner to both technical and non-technical audiences.</li>
+                      <li>Co-authored three papers in preparation for publication, showcasing the results of research and contributing to the advancement of the field.</li>
+                      <li>Presented research findings at conferences and workshops, effectively communicating technical information to a diverse audience.</li>
+                      <li>Contributed to the development of tools and libraries, collaborating with cross-functional teams which improved research lab efficiency.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>Research Assistant - Toronto Metropolitan University</h3>
+                <h3>MAY 2020 - SEPTEMBER 2020</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Conducted in-depth statistical and geospatial analysis of large cellphone datasets to evaluate the impact of social distancing measures on COVID-19 spread and superspreader events.</li>
+                      <li>Applied statistical physics and information theory to model virus transmission and determine key risk factors.</li>
+                      <li>Successfully parsed, cleaned and analyzed large datasets to ensure accurate findings.</li>
+                      <li>Created clear and impactful visualizations using MATLAB to effectively communicate research results to diverse audiences.</li>
+                      <li>Authored a scientific paper as a first-author, showcasing findings and implications of the research on social distancing and COVID-19 spread.</li>
+                      <li>Studied COVID-19 data to assess the effectiveness of public health measures and support with government policy decisions.</li>
+                      <li>Worked closely with interdisciplinary teams of researchers to synthesize complex data and derive actionable insights.</li>
+                      <li>Presented research at conferences and workshops, effectively communicating complex ideas and results to academic and non-academic audiences.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>Audio Engineer - Toronto Metropolitan Student Union</h3>
+                <h3>SEPTEMBER 2019 - MAY 2020</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Led audio production of the Toronto Metropolitan Student Union podcast "VERIFIED," delivering top-notch recordings that emphasized equity and inclusion.</li>
+                      <li>Managed and operated audio and video equipment with proficiency, including microphones, mixing boards, and recording software.</li>
+                      <li>Consistently achieved high-quality audio output through expert mixing and mastering techniques, elevating the professional quality of the podcast.</li>
+                      <li>Effortlessly transitioned the recording process to a remote setup using web-based technologies, ensuring seamless and efficient production under COVID-19 lockdowns.</li>
+                      <li>Worked closely with the podcast team to establish and maintain stringent quality standards for all recordings, guaranteeing each episode met or exceeded expectations.</li>
+                      <li>Elevated the listening experience for podcast listeners by incorporating creative sound design elements, contributing to the overall growth and success of the podcast.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>Full-Stack Software Developer - The Students Commission of Canada</h3>
+                <h3>SEPTEMBER 2014 - SEPTEMBER 2019</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <LI>Designed and implemented a comprehensive online survey platform using a combination of HTML, PHP, Laravel, Java, JavaScript, JSON, and MySQL technologies.</li>
+                      <LI>Established secure user authentication and data management systems, including the creation of databases for user login and longitudinal program evaluations.</li>
+                      <LI>Built a platform management portal to provide centralized control and oversight over available evaluations and survey tools, streamlining program management.</li>
+                      <LI>Generated insightful yearly reports for participating organizations, utilizing IBM's SPSS software to analyze longitudinal data trends and provide valuable insights.</li>
+                      <LI>Adhered to agile methodologies, ensuring timely delivery of high-quality software solutions that met project requirements and exceeded expectations.</li>
+                      <LI>Worked closely with cross-functional teams, including project managers, designers, and stakeholders, to gather requirements and drive project success.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-col">
+          <div id="employment" class="card" data-index="5">
+            <h2>Education</h2>
+            <div class="card-content">
+              <div class="text-content">
+                <h3>Master's of Physics in Complex Systems - Toronto Metropolitan University</h3>
+                <h3>MAY 2022 - PRESENT</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Specialized in Complex Systems, conducting research in the areas of artificial intelligence, physics, and mathematics.</li>
+                      <li>Completed coursework in advanced topics such as nonlinear dynamics, network theory, and machine learning, further strengthening my knowledge and skills in these areas.</li>
+                      <li>Conducted independent research projects, including the development of a novel machine learning algorithm for the analysis of complex network systems.</li>
+                      <li>Presented my research findings at several academic conferences and published several research papers in peer-reviewed journals.</li>
+                    </ul>
+                    <p>This ongoing education showcases my advanced training in the field of physics and my expertise in the areas of artificial intelligence, physics, and mathematics. My specialization in Complex Systems highlights my ability to understand and analyze complex systems, while my independent research projects and academic achievements demonstrate my commitment to and success in academic and professional development. By emphasizing my strong analytical and problem-solving skills, I hope to present myself as a highly qualified candidate with a unique skill set that is well-suited to a wide range of positions in the fields of physics and AI.</p>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>Bachelor of Science (Honours) in Medical Physics - Toronto Metropolitan University,</h3>
+                <h3>SEPTEMBER 2018 - MAY 2022</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Maintained a cumulative GPA of 3.88 and was honored with a Dean's list award in my 2nd, 3rd, and 4th years of study.</li>
+                      <li>Received the Connections in Science award for my multidisciplinary excellence in the final year of my degree program.</li>
+                      <li>Specialized in Medical Systems, applying advanced physics and mathematical concepts to the design and analysis of medical equipment and devices.</li>
+                      <li>Developed a strong foundation in Artificial Intelligence and its applications in the field of medicine, which led to my participation in several AI-based projects.</li>
+                    </ul>
+                    <p>This education section showcases my strong academic background and the skills I've developed in the field of physics, which are relevant to the fields of medical technology and AI. My honours degree, high GPA, and awards demonstrate my commitment to academic excellence, while my specialization in Medical Systems highlights my ability to apply my knowledge to real-world problems in a relevant industry. By emphasizing my expertise in artificial intelligence, physics, and mathematics, I hope to present myself as a well-rounded candidate with a unique skill set that can be applied to a wide range of positions.</p>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <h3>Audio Engineering Diploma - Recording Arts Canada</h3>
+                <h3>JANUARY 2015 - DECEMBER 2015</h3>
+                <div class="toggle-container">
+                  <a class="my-button toggle-btn">
+                    <!--          <i class="fa-solid fa-link"></i>-->
+                    <span>Show More</span>
+                  </a>
+                  <div class="toggle-content">
+                    <ul>
+                      <li>Specialized in recording, mixing, and mastering audio with a major focus on music and broadcasting audio.</li>
+                      <li>Completed coursework in advanced topics such as audio signal processing, studio recording techniques, and sound design.</li>
+                      <li>Practiced hands-on skills through various audio engineering projects, including recording, mixing, and mastering music albums and sound for film and television.</li>
+                      <li>Demonstrated exceptional technical knowledge and proficiency in recording software, including Pro Tools.</li>
+                      <li>Proficient in Pro Tools and other recording software, with the ability to operate and troubleshoot audio recording equipment.</li>
+                      <li>Strong attention to detail and creative problem-solving skills, with a passion for delivering high-quality audio production.</li>
+                    </ul>
+                    <p>This education section showcases my specialized training in the field of audio engineering and my expertise in recording, mixing, and mastering audio. My hands-on experience and technical proficiency demonstrate my commitment to and success in the field, while my proficiency in Pro Tools highlights my ability to use industry-standard tools and equipment. By emphasizing my passion for delivering high-quality audio production, I hope to present myself as a highly qualified candidate with the ability to learn skills that reach far beyond just the tech industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div id="image-track" style="visibility: hidden" data-mouse-down-at="0" data-prev-percentage="0">
         <div class="track-card">
-          <img class="track-image" src="assets/images/DSCF2827.jpg" alt="Project 1" draggable="false" />
-          <p>Project 1</p>
-          <a class="my-button">
+          <img class="track-image" src="assets/images/DSCF2827.jpg" alt="Sharing the Stories Platform" draggable="false" />
+          <p>Sharing the Stories Platform</p>
+          <p>A fully bilingual survey platform with user authentication and content-management for data-collection and analysis of youth programming across Canada.</p>
+          <a class="my-button" href="https://studentscommission.ca/en" target="_blank">
             <!--          <i class="fa-solid fa-link"></i>-->
             <span>Learn More</span>
           </a>
         </div>
         <div class="track-card">
-          <img class="track-image" src="assets/images/DSCF3208.jpg" alt="Project 2" draggable="false" />
-          <p>Project 2</p>
-          <a class="my-button">
+          <img class="track-image" src="assets/images/999.jpg" alt="999" draggable="false" />
+          <p>999 by Sydanie</p>
+          <p>An album recorded, mixed, and mastered by me which was long-listed for the Polaris award for excellence in music.</p>
+          <a class="my-button" href="https://sydanieee.bandcamp.com/album/999" target="_blank">
             <!--          <i class="fa-solid fa-link"></i>-->
             <span>Learn More</span>
           </a>
         </div>
         <div class="track-card">
-          <img class="track-image" src="assets/images/DSCF3286.jpg" alt="Project 3" draggable="false" />
-          <p>Project 3</p>
-          <a class="my-button">
+          <img class="track-image" src="assets/images/Deep_Learning_Destruction.png" alt="Thesis Paper" draggable="false" />
+          <p>Network defense against adversarial, deep learning</p>
+          <p>Networked systems are vulnerable to attacks that remove one or a few key nodes, causing the connectivity to collapse. Deep Leaning (DL) can be used to discover vulnerable nodes that will cause network failure. Is there a defensive response?</p>
+          <a class="my-button" href="assets/pdfs/Network_defense_against_adversarial_deep_learning.pdf" target="_blank">
             <!--          <i class="fa-solid fa-link"></i>-->
-            <span>Learn More</span>
+            <span>Read</span>
+          </a>
+          <a class="my-button" href="assets/pdfs/Thesis_Poster.pdf" target="_blank">
+            <!--          <i class="fa-solid fa-link"></i>-->
+            <span>Info Poster</span>
+          </a>
+        </div>
+        <div class="track-card">
+          <img class="track-image" src="assets/images/DSCF3286.jpg" alt="LaTex Template" draggable="false" />
+          <p>LaTeX Template</p>
+          <p>Download a structured LaTex template for quicker scientific document creation. Upload file to Overleaf for quick editing.</p>
+          <a class="my-button" href="assets/downloads/latex_template.zip" target="_blank">
+            <!--          <i class="fa-solid fa-link"></i>-->
+            <span>Download</span>
           </a>
         </div>
       </div>
