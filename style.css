@@ -9,6 +9,7 @@
   --accent-color-2: #E4572E;
   --accent-color-3: #1A659E;
   --accent-color-4: #6DB1BF;
+  --num-projects: 5;
 }
 
 /* Reset default styles */
@@ -278,7 +279,7 @@ footer a:hover {
   position: absolute;
   left: 50%;
   top: 60%;
-  right: -40em;
+  right: calc(var(--num-projects)*(-40vmin) + 250px);
   padding: 100px 50px;
   border-radius: 30px;
   transform: translate(0%, -50%);
@@ -292,7 +293,7 @@ footer a:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--off-white);
   padding: 20px;
-  max-width: 43vmin;
+  width: 35vmin;
 }
 
 .track-image {
