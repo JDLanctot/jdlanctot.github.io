@@ -19,14 +19,6 @@
 }
 
 /* Set background color and font styles */
-@keyframes background-pan {
-  from {
-    background-position: 0 center;
-  }
-  to {
-    background-position: -200% center;
-  }
-}
 body {
   display: flex;
   flex-direction: column;
@@ -232,6 +224,10 @@ footer a:hover {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Add a transition effect */
 }
 
+.card:hover {
+  animation: shake 500ms cubic-bezier(.13,.53,.38,.97);
+}
+
 .card-show {
   opacity: 1; /* Change the opacity to 1 */
   transform: translateY(0); /* Move the card back up */
@@ -400,6 +396,37 @@ body.menu-toggled > .my-button > span {
 /*.resume li {*/
 /*  font-size: 14pt;*/
 /*}*/
+
+/* Keyframes for animation */
+@keyframes background-pan {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-2px) rotate(-0.1125deg);
+  }
+  40% {
+    transform: translateX(2px) rotate(-0.125deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-0.1125deg);
+  }
+  80% {
+    transform: translateX(2px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
 
 /* Media query for screens larger than 1200px */
 @media only screen and (min-width: 1200px) {
