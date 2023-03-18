@@ -274,7 +274,7 @@ footer a:hover {
 }
 
 /* Set styles for the projects section */
-#image-track {
+#img-track {
   display: flex;
   gap: 4vmin;
   position: absolute;
@@ -297,7 +297,7 @@ footer a:hover {
   width: 35vmin;
 }
 
-.track-image {
+.track-img {
   width: 40vmin;
   height: 40vmin;
   object-fit: cover;
@@ -305,21 +305,21 @@ footer a:hover {
 }
 
 /* -- btn Styles -- */
-body.menu-toggled > .my-btn > span {
+body.menu-tgld > .my-btn > span {
   color: rgb(30, 30, 30);
 }
 
-.toggle-content {
+.tgl-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
 
-.toggle-btn.active {
+.tgl-btn.active {
   background-color: #f2f2f2;
 }
 
-.toggle-content.active {
+.tgl-content.active {
   max-height: 1000px;
 }
 
@@ -408,19 +408,6 @@ body.menu-toggled > .my-btn > span {
   width: 100%;
 }
 
-/*.resume p {*/
-/*  font-size: 14pt;*/
-/*}*/
-
-/*.resume ul {*/
-/*  list-style: circle;*/
-/*  display: block;*/
-/*}*/
-
-/*.resume li {*/
-/*  font-size: 14pt;*/
-/*}*/
-
 /* Keyframes for animation */
 @keyframes background-pan {
   from {
@@ -477,14 +464,6 @@ body.menu-toggled > .my-btn > span {
     flex-basis: calc(50% - var(--card-gap)/2);
     height: 100%;
   }
-
-  /*.card:first-child {*/
-  /*  margin-right: 20px;*/
-  /*}*/
-
-  /*.card:last-child {*/
-  /*  margin-left: 20px;*/
-  /*}*/
 
   .card p {
     font-size: 1.5em;
@@ -613,11 +592,11 @@ body.menu-toggled > .my-btn > span {
     width: 85vmin !important;
   }
 
-  .track-image {
+  .track-img {
     width: 85vmin !important;
   }
 
-  #image-track {
+  #img-track {
     right: calc(var(--num-projects)*(-85vmin) + 250px);
   }
 
