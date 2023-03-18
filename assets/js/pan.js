@@ -41,6 +41,7 @@ const handleOnMove = e => {
 };
 
 /* -- Handing a btn to toggle the portfolio as visible or not -- */
+const headerPortfolioBtn = document.getElementById("header-portfolio-btn");
 const portfolioBtn = document.getElementById("portfolio-btn");
 const portfolioCloseBtn = document.getElementById("portfolio-close-btn");
 let prevPercentage = track.dataset.prevPercentage || 0;
@@ -60,11 +61,6 @@ const toggleTrackVisibility = () => {
   }
 };
 
-portfolioBtn.onclick = () => toggleTrackVisibility();
-portfolioCloseBtn.onclick = () => toggleTrackVisibility();
-
-const headerPortfolioBtn = document.getElementById("header-portfolio-btn");
-
 const toggleHeaderBtnStyle = () => {
   headerPortfolioBtn.classList.toggle("active");
   if (headerPortfolioBtn.classList.contains("active")) {
@@ -82,8 +78,15 @@ headerPortfolioBtn.onclick = () => {
 };
 
 portfolioBtn.onclick = () => {
+  toggleTrackVisibility()
   toggleHeaderBtnStyle();
-  toggleTrackVisibility(portfolioBtn);
+  toggleTrackVisibility();
+};
+
+portfolioCloseBtn.onclick = () => {
+  toggleTrackVisibility()
+  toggleHeaderBtnStyle();
+  toggleTrackVisibility();
 };
 
 /* -- Had to add extra lines for touch events -- */
