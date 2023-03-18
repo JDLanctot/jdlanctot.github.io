@@ -304,8 +304,8 @@ footer a:hover {
   object-position: 100% center;
 }
 
-/* -- Button Styles -- */
-body.menu-toggled > .my-button > span {
+/* -- btn Styles -- */
+body.menu-toggled > .my-btn > span {
   color: rgb(30, 30, 30);
 }
 
@@ -315,7 +315,7 @@ body.menu-toggled > .my-button > span {
   transition: max-height 0.3s ease-out;
 }
 
-.toggle-button.active {
+.toggle-btn.active {
   background-color: #f2f2f2;
 }
 
@@ -331,7 +331,7 @@ body.menu-toggled > .my-button > span {
   padding: 0.5rem 1rem;
 }
 
-.my-button {
+.my-btn {
   align-items: center;
   backdrop-filter: blur(3px);
   background-color: var(--accent-color-1);
@@ -349,21 +349,30 @@ body.menu-toggled > .my-button > span {
   margin: 20px 0;
 }
 
-.my-button:hover {
+.my-btn:hover {
   background-color: var(--main-color);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.my-button > i, .my-button > span {
+.my-btn > i, .my-btn > span {
   height: 20px;
   line-height: 20px;
   color: var(--white);
 }
 
-.my-button > span {
+.my-btn > span {
   color: var(--white);
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+}
+
+.x-btn {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  border-radius: 50%;
+  top: 0;
+  left: 20px;
 }
 
 .socials {
@@ -612,7 +621,7 @@ body.menu-toggled > .my-button > span {
     right: calc(var(--num-projects)*(-85vmin) + 250px);
   }
 
-  .my-button {
+  .my-btn {
     font-size: 0.8em;
   }
 

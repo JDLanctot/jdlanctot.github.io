@@ -40,11 +40,12 @@ const handleOnMove = e => {
   }
 };
 
-/* -- Handing a button to toggle the portfolio as visible or not -- */
+/* -- Handing a btn to toggle the portfolio as visible or not -- */
 const portfolioBtn = document.getElementById("portfolio-btn");
+const portfolioCloseBtn = document.getElementById("portfolio-close-btn");
 let prevPercentage = track.dataset.prevPercentage || 0;
 
-const toggleTrackVisibility = (button) => {
+const toggleTrackVisibility = () => {
   if (track.style.visibility === "visible") {
     track.style.visibility = "hidden";
     track.dataset.mouseDownAt = 0;
@@ -59,7 +60,8 @@ const toggleTrackVisibility = (button) => {
   }
 };
 
-portfolioBtn.onclick = () => toggleTrackVisibility(portfolioBtn);
+portfolioBtn.onclick = () => toggleTrackVisibility();
+portfolioCloseBtn.onclick = () => toggleTrackVisibility();
 
 const headerPortfolioBtn = document.getElementById("header-portfolio-btn");
 

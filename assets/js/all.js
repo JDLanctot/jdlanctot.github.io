@@ -40,11 +40,12 @@ const handleOnMove = e => {
     }
 };
 
-/* -- Handing a button to toggle the portfolio as visible or not -- */
+/* -- Handing a btn to toggle the portfolio as visible or not -- */
 const portfolioBtn = document.getElementById("portfolio-btn");
+const portfolioCloseBtn = document.getElementById("portfolio-close-btn");
 let prevPercentage = track.dataset.prevPercentage || 0;
 
-const toggleTrackVisibility = (button) => {
+const toggleTrackVisibility = () => {
     if (track.style.visibility === "visible") {
         track.style.visibility = "hidden";
         track.dataset.mouseDownAt = 0;
@@ -59,7 +60,8 @@ const toggleTrackVisibility = (button) => {
     }
 };
 
-portfolioBtn.onclick = () => toggleTrackVisibility(portfolioBtn);
+portfolioBtn.onclick = () => toggleTrackVisibility();
+portfolioCloseBtn.onclick = () => toggleTrackVisibility();
 
 const headerPortfolioBtn = document.getElementById("header-portfolio-btn");
 
@@ -111,22 +113,22 @@ cards.forEach(card => {
 });
 
 /* -- Add accordion style toggling -- */
-// Get all the toggle buttons
-const toggleButtons = document.querySelectorAll('.toggle-btn');
+// Get all the toggle btns
+const togglebtns = document.querySelectorAll('.toggle-btn');
 
-// Loop through each toggle button
-toggleButtons.forEach(button => {
-    // Add a click event listener to each button
-    button.addEventListener('click', () => {
-        // Get the next sibling element of the button
-        const content = button.nextElementSibling;
+// Loop through each toggle btn
+togglebtns.forEach(btn => {
+    // Add a click event listener to each btn
+    btn.addEventListener('click', () => {
+        // Get the next sibling element of the btn
+        const content = btn.nextElementSibling;
         // Toggle the "hidden" class on the content element
         content.classList.toggle('active');
-        // Change the text of the button based on whether the content is hidden or not
+        // Change the text of the btn based on whether the content is hidden or not
         if (content.classList.contains('active')) {
-            button.textContent = 'Show More';
+            btn.textContent = 'Show More';
         } else {
-            button.textContent = 'Show Less';
+            btn.textContent = 'Show Less';
         }
     });
 });
