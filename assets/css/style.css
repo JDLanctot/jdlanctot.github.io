@@ -274,7 +274,7 @@ footer a:hover {
 }
 
 /* Set styles for the projects section */
-#img-track {
+#image-track {
   display: flex;
   gap: 4vmin;
   position: absolute;
@@ -596,7 +596,7 @@ body.menu-tgld > .my-btn > span {
     width: 85vmin !important;
   }
 
-  #img-track {
+  #image-track {
     right: calc(var(--num-projects)*(-85vmin) + 250px);
   }
 
