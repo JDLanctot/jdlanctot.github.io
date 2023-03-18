@@ -41,28 +41,24 @@ const handleOnMove = e => {
 };
 
 /* -- Handing a btn to toggle the portfolio as visible or not -- */
-const headerPortfolioBtn = document.getElementById("header-portfolio-btn");
 const portfolioBtn = document.getElementById("portfolio-btn");
 const portfolioCloseBtn = document.getElementById("portfolio-close-btn");
+const headerPortfolioBtn = document.getElementById("header-portfolio-btn");
 let prevPercentage = track.dataset.prevPercentage || 0;
 
 const toggleTrackVisibility = () => {
-    if (track.style.visibility === "visible") {
-        track.style.visibility = "hidden";
-        track.dataset.mouseDownAt = 0;
-        track.dataset.percentage = 0;
-        prevPercentage = track.dataset.prevPercentage || 0;
-        track.dataset.prevPercentage = 0;
-    } else {
-        track.style.visibility = "visible";
-        track.dataset.mouseDownAt = 0;
-        track.dataset.percentage = prevPercentage;
-        track.dataset.prevPercentage = prevPercentage;
-    }
+    const isTrackVisible = track.style.visibility === "visible";
+    const percentage = isTrackVisible ? 0 : prevPercentage;
+
+    track.style.visibility = isTrackVisible ? "hidden" : "visible";
+    track.dataset.mouseDownAt = 0;
+    track.dataset.percentage = percentage;
+    track.dataset.prevPercentage = percentage;
 };
 
 const toggleHeaderBtnStyle = () => {
     headerPortfolioBtn.classList.toggle("active");
+
     if (headerPortfolioBtn.classList.contains("active")) {
         headerPortfolioBtn.style.backgroundColor = "#FFFAFF";
         headerPortfolioBtn.style.color = "#0D1F22";
@@ -70,24 +66,16 @@ const toggleHeaderBtnStyle = () => {
         headerPortfolioBtn.style.backgroundColor = "";
         headerPortfolioBtn.style.color = "";
     }
-}
-
-headerPortfolioBtn.onclick = () => {
-    toggleHeaderBtnStyle();
-    toggleTrackVisibility(headerPortfolioBtn);
 };
 
-portfolioBtn.onclick = () => {
-    toggleTrackVisibility()
-    toggleHeaderBtnStyle();
+const toggleVisibilityAndStyle = () => {
     toggleTrackVisibility();
+    toggleHeaderBtnStyle();
 };
 
-portfolioCloseBtn.onclick = () => {
-    toggleTrackVisibility()
-    toggleHeaderBtnStyle();
-    toggleTrackVisibility();
-};
+portfolioBtn.addEventListener("click", toggleVisibilityAndStyle);
+portfolioCloseBtn.addEventListener("click", toggleVisibilityAndStyle);
+headerPortfolioBtn.addEventListener("click", toggleVisibilityAndStyle);
 
 /* -- Had to add extra lines for touch events -- */
 
