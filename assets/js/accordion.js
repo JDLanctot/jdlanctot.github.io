@@ -1,17 +1,17 @@
 /* -- Add accordion style toggling -- */
-const tglbtns = document.querySelectorAll('.tgl-btn');
+const toggleBtns = document.querySelectorAll('.toggle-btn');
 
-tglbtns.forEach(btn => {
+toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const content = btn.nextElementSibling;
-        content.classList.tgl('active');
+        content.classList.toggle('active');
         btn.textContent = content.classList.contains('active') ? 'Show More' : 'Show Less';
     });
 });
 
 /* -- Add event listeners for touch events -- */
-window.addEventListener('mousedown', handleOnDwn);
-window.addEventListener('touchstart', e => handleOnDwn(e.touches[0]));
+window.addEventListener('mousedown', handleOnDown);
+window.addEventListener('touchstart', e => handleOnDown(e.touches[0]));
 window.addEventListener('mouseup', handleOnUp);
 window.addEventListener('touchend', e => handleOnUp(e.touches[0]));
 window.addEventListener('mousemove', handleOnMove);
