@@ -96,9 +96,14 @@ toggleBtns.forEach(btn => {
 });
 
 /* -- Add event listeners for touch events -- */
-window.addEventListener('mousedown', handleOnDown);
-window.addEventListener('touchstart', e => handleOnDown(e.touches[0]));
-window.addEventListener('mouseup', handleOnUp);
-window.addEventListener('touchend', e => handleOnUp(e.touches[0]));
-window.addEventListener('mousemove', handleOnMove);
-window.addEventListener('touchmove', e => handleOnMove(e.touches[0]));
+window.onmousedown = e => handleOnDown(e);
+
+window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+window.onmouseup = e => handleOnUp(e);
+
+window.ontouchend = e => handleOnUp(e.touches[0]);
+
+window.onmousemove = e => handleOnMove(e);
+
+window.ontouchmove = e => handleOnMove(e.touches[0]);
