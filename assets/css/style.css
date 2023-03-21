@@ -1,15 +1,24 @@
 :root {
-  --white: #EFEFEF;
-  --charcoal: #1b1b1b;
-  --steel: #323238;
+  /* Main colours. Should be similar shades  */
   --main-color: #121212;
   --main-transparent-color: rgba(18, 18, 18, 0.93);
   --main-gradient-color: #151515;
+  --dark-background-color: #1b1b1b;
+  --light-background-color: #323238;
+
+  /* Accent Colours, only the first two are inn use rn. First for buttons and second for link hover. */
   --accent-color-1: #E84855;
-  --accent-color-2: #E4572E;
-  --accent-color-3: #1A659E;
+  --accent-color-2: #1A659E;
+  --accent-color-3: #E4572E;
   --accent-color-4: #6DB1BF;
-  --num-projects: 5;
+
+  /* For text color and for hovering nav items. If Main colors are dark, pick a light colour and vice versa */
+  --text-color: #EFEFEF;
+
+  /* How many items you will have in the portfolio carousel */
+  --num-projects: 6;
+
+  /* Macro parameter for spacing between the cards */
   --card-gap: 40px;
 }
 
@@ -32,14 +41,14 @@ body {
   animation: background-pan 10s linear infinite;
   background: linear-gradient(
           to right,
-          var(--charcoal),
-          var(--steel),
-          var(--charcoal)
+          var(--dark-background-color),
+          var(--light-background-color),
+          var(--dark-background-color)
   );
   background-size: 200%;
   margin: 0;
   overflow: hidden;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 /* Set styles for header */
@@ -64,7 +73,7 @@ header {
 .navbar-brand{
   font-size: 28px;
   font-weight: bold;
-  color: var(--white);
+  color: var(--text-color);
   margin-right: auto;
   order: 0;
 }
@@ -82,7 +91,7 @@ header {
 
 .nav-link {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-color);
   transition: color 0.3s ease;
   cursor: pointer;
   padding: 10px 15px;
@@ -90,17 +99,17 @@ header {
 }
 
 header nav a:hover {
-  color: var(--charcoal);
-  background-color: var(--white);
+  color: var(--dark-background-color);
+  background-color: var(--text-color);
 }
 
 .is-active .nav-link {
-  color: var(--charcoal);
-  background-color: var(--white);
+  color: var(--dark-background-color);
+  background-color: var(--text-color);
 }
 
 .is-active .nav-link:hover {
-  background-color: var(--charcoal);
+  background-color: var(--dark-background-color);
 }
 
 /* Set styles for main content */
@@ -115,7 +124,7 @@ main {
 main h2 {
   font-size: 2.5em;
   margin-top: 10px;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 main h3 {
@@ -154,7 +163,7 @@ main a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 main a:hover {
@@ -179,17 +188,17 @@ footer {
   box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-size: 14px;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 footer a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--accent-color-3);
+  color: var(--accent-color-2);
 }
 
 /* Sections, Cards, and layout modules */
@@ -219,7 +228,7 @@ footer a:hover {
   background: linear-gradient(
     -45deg,
     var(--main-gradient-color),
-    var(--charcoal)
+    var(--dark-background-color)
   );
   padding: 20px;
   display: flex;
@@ -299,7 +308,7 @@ footer a:hover {
 .track-card {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  background-color: var(--charcoal);
+  background-color: var(--dark-background-color);
   padding: 20px;
   width: 35vmin;
 }
@@ -364,11 +373,11 @@ body.menu-toggled > .my-btn > span {
 .my-btn > i, .my-btn > span {
   height: 20px;
   line-height: 20px;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 .my-btn > span {
-  color: var(--white);
+  color: var(--text-color);
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
