@@ -1,15 +1,17 @@
 :root {
-  /* Main colours. Should be similar shades  */
+  /* Main colours. Should be similar shades */
   --main-color: #121212;
   --main-gradient-color: #151515;
-  --dark-background-color: #1b1b1b;
   --light-background-color: #323238;
+  --dark-background-color: #1b1b1b;
 
   /* Accent Colours, only the first two are inn use rn. First for buttons and second for link hover. */
   --accent-color-1: #E84855;
   --accent-color-2: #1A659E;
   --accent-color-3: #E4572E;
   --accent-color-4: #6DB1BF;
+
+  --staging: #9b1156;
 
   /* For text color and for hovering nav items. If Main colors are dark, pick a light colour and vice versa */
   --text-color: #EFEFEF;
@@ -22,7 +24,7 @@
   --btn-border-color: #EFEFEF;
 
   /* For creating some transparent effects (use 1.0 if you want anything to be opaque) */
-  --image-track-transparency: 0.93;
+  --image-track-transparency: 0.86;
   --card-upper-transparency: 1.0;
   --card-lower-transparency: 1.0;
   --card-edge-transparency: 0.1;
@@ -35,16 +37,17 @@
   /* Macro parameter for spacing between the cards */
   --card-gap: 40px;
 
-  /* Not in use, but can be used to add colorful circles to behind the cards if
-  they are transparent if card::before and after uncommented */
-  /*--splash-upper-transparency-1: 0.03;*/
-  /*--splash-lower-transparency-1: 0.06;*/
-  /*--splash-upper-transparency-2: 0.03;*/
-  /*--splash-lower-transparency-2: 0.06;*/
-  /*--splash-upper-gradient-color-1: 228, 55, 152;*/
-  /*--splash-lower-gradient-color-1: 232, 172, 85;*/
-  /*--splash-upper-gradient-color-2: 109, 177, 191;*/
-  /*--splash-lower-gradient-color-2: 26, 101, 158;*/
+  /* Used for experimental Glasmorphic Stuff; you will have to get the RGB colors for yourself */
+  /*--splash-upper-transparency: 0.0;*/
+  /*--splash-lower-transparency: 0.0;*/
+  /*--splash-upper-gradient-color-1: 21, 21, 28;*/
+  /*--splash-lower-gradient-color-1: 27, 27, 36;*/
+  /*--splash-upper-gradient-color-2: 27, 27, 36;*/
+  /*--splash-lower-gradient-color-2: 35, 35, 56;*/
+  /*--splash-upper-gradient-color-3: 21, 21, 28;*/
+  /*--splash-lower-gradient-color-3: 27, 27, 36;*/
+  /*--splash-upper-gradient-color-4: 27, 27, 36;*/
+  /*--splash-lower-gradient-color-4: 35, 35, 56;*/
 }
 
 /* Reset default styles */
@@ -63,6 +66,19 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -2;
   animation: background-pan 10s linear infinite;
   background: linear-gradient(
           to right,
@@ -71,9 +87,7 @@ body {
           var(--dark-background-color)
   );
   background-size: 200%;
-  margin: 0;
-  overflow: hidden;
-  color: var(--text-color);
+  filter: blur(150px);
 }
 
 /* Set styles for header */
@@ -249,7 +263,7 @@ footer a:hover {
 
 .card, .card-show {
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(var(--shadow-color), var(--shadow-transparency));
+  box-shadow: 0 8px 16px rgba(var(--shadow-color), var(--shadow-transparency));
   background: linear-gradient(
     -45deg,
     rgba(var(--card-lower-gradient-color), var(--card-lower-transparency)),
@@ -262,68 +276,6 @@ footer a:hover {
   border-top: 2px solid rgba(var(--card-edge-highlight-color), var(--card-edge-transparency));
   border-left: 2px solid rgba(var(--card-edge-highlight-color), var(--card-edge-transparency));
 }
-
-/*.card::before {*/
-/*  content: "";*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  border-radius: 10px;*/
-/*  background: linear-gradient(*/
-/*          -45deg,*/
-/*          rgba(var(--splash-lower-gradient-color-1), var(--splash-lower-transparency-1)),*/
-/*          rgba(var(--splash-upper-gradient-color-1), var(--splash-upper-transparency-1))*/
-/*  );*/
-/*  clip-path: circle(-60% at right 20%);*/
-/*  z-index: -100;*/
-/*  -webkit-mask-image: radial-gradient(*/
-/*          circle,*/
-/*          transparent 0%,*/
-/*          rgba(0, 0, 0, 0.4) 100%,*/
-/*          rgba(0, 0, 0, 0.8) 200%,*/
-/*          black 300%*/
-/*  );*/
-/*  mask-image: radial-gradient(*/
-/*          circle,*/
-/*          transparent 0%,*/
-/*          rgba(0, 0, 0, 0.4) 100%,*/
-/*          rgba(0, 0, 0, 0.8) 200%,*/
-/*          black 300%*/
-/*  );*/
-/*}*/
-
-/*.card::after {*/
-/*  content: "";*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  border-radius: 10px;*/
-/*  background: linear-gradient(*/
-/*          -45deg,*/
-/*          rgba(var(--splash-lower-gradient-color-2), var(--splash-lower-transparency-2)),*/
-/*          rgba(var(--splash-upper-gradient-color-2), var(--splash-upper-transparency-2))*/
-/*  );*/
-/*  clip-path: circle(60% at left 30%);*/
-/*  z-index: -100;*/
-/*  -webkit-mask-image: radial-gradient(*/
-/*          circle,*/
-/*          transparent 0%,*/
-/*          rgba(0, 0, 0, 0.4) 100%,*/
-/*          rgba(0, 0, 0, 0.8) 200%,*/
-/*          black 300%*/
-/*  );*/
-/*  mask-image: radial-gradient(*/
-/*          circle,*/
-/*          transparent 0%,*/
-/*          rgba(0, 0, 0, 0.4) 100%,*/
-/*          rgba(0, 0, 0, 0.8) 200%,*/
-/*          black 300%*/
-/*  );*/
-/*}*/
 
 .card {
   opacity: 0; /* Set the initial opacity to 0 */
@@ -389,7 +341,7 @@ footer a:hover {
   padding: 100px 50px;
   border-radius: 30px;
   transform: translate(0%, -50%);
-  background-color: rgba(var(--main-color), var(--image-track-transparency));
+  background-color: rgba(var(--shadow-color), var(--image-track-transparency));
   user-select: none; /* -- Prevent image highlighting -- */
   z-index: 200;
 }
@@ -510,6 +462,126 @@ body.menu-toggled > .my-btn > span {
 .list-card {
   width: 100%;
 }
+
+/* Experimental Glasmorphic Stuff */
+/*.color-blur {*/
+/*  position: absolute;*/
+/*  border-radius: 10px;*/
+/*  z-index: -100;*/
+/*  filter: blur(10vmin);*/
+/*}*/
+
+/*.colors .color-blur:nth-of-type(1) {*/
+/*  top: 10vmin;*/
+/*  left: 10vmin;*/
+/*  width: 40%;*/
+/*  height: 40%;*/
+/*}*/
+
+/*.colors .color-blur:nth-of-type(2) {*/
+/*  bottom: 10vmin;*/
+/*  right: 10vmin;*/
+/*  width: 65%;*/
+/*  height: 65%;*/
+/*}*/
+
+/*.color-1 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgb(var(--splash-lower-gradient-color-1)),*/
+/*          rgb(var(--splash-upper-gradient-color-1))*/
+/*  );*/
+/*}*/
+
+/*.color-2 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgb(var(--splash-lower-gradient-color-2)),*/
+/*          rgb(var(--splash-upper-gradient-color-2))*/
+/*  );*/
+/*}*/
+
+/*.color-3 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgb(var(--splash-lower-gradient-color-3)),*/
+/*          rgb(var(--splash-upper-gradient-color-3))*/
+/*  );*/
+/*}*/
+
+/*.color-4 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgb(var(--splash-lower-gradient-color-4)),*/
+/*          rgb(var(--splash-upper-gradient-color-4))*/
+/*  );*/
+/*}*/
+
+/*.transparent-color-1 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgba(var(--splash-lower-gradient-color-1), var(--splash-lower-transparency)),*/
+/*          rgba(var(--splash-upper-gradient-color-1), var(--splash-upper-transparency))*/
+/*  );*/
+/*}*/
+
+/*.transparent-color-2 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgba(var(--splash-lower-gradient-color-2), var(--splash-lower-transparency)),*/
+/*          rgba(var(--splash-upper-gradient-color-2), var(--splash-upper-transparency))*/
+/*  );*/
+/*}*/
+
+/*.transparent-color-3 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgba(var(--splash-lower-gradient-color-3), var(--splash-lower-transparency)),*/
+/*          rgba(var(--splash-upper-gradient-color-3), var(--splash-upper-transparency))*/
+/*  );*/
+/*}*/
+
+/*.transparent-color-4 {*/
+/*  background: linear-gradient(*/
+/*          -45deg,*/
+/*          rgba(var(--splash-lower-gradient-color-4), var(--splash-lower-transparency)),*/
+/*          rgba(var(--splash-upper-gradient-color-4), var(--splash-upper-transparency))*/
+/*  );*/
+/*}*/
+
+/*.square {*/
+/*  position: absolute;*/
+/*  z-index: -1;*/
+/*  filter: blur(150px);*/
+/*}*/
+
+/*body .square:nth-of-type(1) {*/
+/*  bottom: 0%;*/
+/*  left: 0%;*/
+/*  width: 40%;*/
+/*  height: 40%;*/
+/*}*/
+
+/*body .square:nth-of-type(2) {*/
+/*  top: 5%;*/
+/*  right: 20%;*/
+/*  width: 60%;*/
+/*  height: 100%;*/
+/*}*/
+
+/*body .square:nth-of-type(3) {*/
+/*  top: 10%;*/
+/*  left: 80%;*/
+/*  width: 40%;*/
+/*  height: 80%;*/
+/*}*/
+
+/*body .square:nth-of-type(4) {*/
+/*  top: 0%;*/
+/*  left: 0%;*/
+/*  width: 60%;*/
+/*  height: 80%;*/
+/*}*/
 
 /* Keyframes for animation */
 @keyframes background-pan {
