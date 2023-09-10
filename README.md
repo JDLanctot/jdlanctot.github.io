@@ -31,12 +31,12 @@ This website serves as a digital representation of my professional achievements 
 
 ## Installation
 
-To install this project on your local machine, simply clone the repository and open the `index.html` file in your preferred browser:
+To install this project on your local machine, simply clone the repository and open the `index.html` file in your preferred browser (here `code .` will open the repo in VSCODE if you have followed my [Guide for Setting up Windows for Research and Coding](https://github.com/JDLanctot/dotfiles)):
 
 ```sh
 git clone https://github.com/JDLanctot/jldlanctot.github.io.git
-cd jldlanctot.github.io.git
-open index.html
+cd jldlanctot.github.io
+code .
 ```
 
 ## Usage
