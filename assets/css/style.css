@@ -32,7 +32,7 @@
   --btn-border-transparency: 0.2;
 
   /* How many items you will have in the portfolio carousel */
-  --num-projects: 6;
+  --num-projects: 8;
 
   /* Macro parameter for spacing between the cards */
   --card-gap: 40px;
