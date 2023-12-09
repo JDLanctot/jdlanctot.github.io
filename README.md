@@ -55,13 +55,13 @@ To use this website, simply navigate to the homepage and explore the different s
 Other GitHub repos to help you with Academic Success.
 
 ### LaTex Template
-Visit my LaTex Template repo for a template to start writing academic publications in LaTex quick: [LaTex Template](https://github.com/JDLanctot/latex_template).
+Visit my LaTex Template repo for a template to start writing academic publications in LaTex quick: [LaTex Template](https://github.com/JDLanctot/latex_template). [[Latex Scientific Writing Template]]
 
 ### My Dotfiles
-Visit My Dotfiles repo for instructions and code to setup a Windows Computer for doing Scientific Research Coding: [My Dotfiles](https://github.com/JDLanctot/dotfiles).
+Visit My Dotfiles repo for instructions and code to setup a Windows Computer for doing Scientific Research Coding: [My Dotfiles](https://github.com/JDLanctot/dotfiles). [[My Dotfiles]]
 
 ### Scholarship Applications
-Visit my Scholarship Applications repo for instructions templates for applying to Graduate Level Scholarships, such as NSERC: [Scholarship Applications](https://github.com/JDLanctot/Scholarship-Applications).
+Visit my Scholarship Applications repo for instructions templates for applying to Graduate Level Scholarships, such as NSERC: [Scholarship Applications](https://github.com/JDLanctot/Scholarship-Applications). [[Scholarship Applications]]
 
 ## Contributing
 
@@ -69,4 +69,4 @@ If you have any suggestions or improvements for this template, feel free to open
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details. [[LICENSE]]
